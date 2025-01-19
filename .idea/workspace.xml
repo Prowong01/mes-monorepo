@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a2795f93-4dfb-4a23-b6e6-d751c64205f8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/src/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/database/seed.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/api/production/controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/production/controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/api/production/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/production/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/api/production/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/production/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/database/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/database/schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Prowong01"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Prowong01/mes-monorepo.git",
+    "accountId": "a4aaaa65-b20a-4748-b114-a2745ce10ec0"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2rlCNrKiv7EeT70aLWgXCGGSnOP" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "22.13.0",
+    "javascript.nodejs.core.library.typings.version": "22.10.7",
+    "last_opened_file_path": "C:/Users/new/OneDrive/Desktop/Code/mes-monorepo/backend/src/api/quality",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/new/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.13.0/node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "C:\\Users\\new\\OneDrive\\Desktop\\Code\\mes-monorepo\\frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\new\OneDrive\Desktop\Code\mes-monorepo\backend\src\api\quality" />
+      <recent name="C:\Users\new\OneDrive\Desktop\Code\mes-monorepo\backend\src\api\production" />
+      <recent name="C:\Users\new\OneDrive\Desktop\Code\mes-monorepo\backend\src\api\dashboard" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\new\OneDrive\Desktop\Code\mes-monorepo\backend" />
+      <recent name="C:\Users\new\OneDrive\Desktop\Code\mes-monorepo\backend\src\database" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a2795f93-4dfb-4a23-b6e6-d751c64205f8" name="Changes" comment="" />
+      <created>1737124237738</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1737124237738</updated>
+      <workItem from="1737124239977" duration="9565000" />
+      <workItem from="1737292140237" duration="3110000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/backend/src/api/index.ts</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

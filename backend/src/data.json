@@ -1,0 +1,37 @@
+{
+  "products": [
+    { "name": "Product A", "description": "High-quality product A" },
+    { "name": "Product B", "description": "High-quality product B" },
+    { "name": "Product C", "description": "High-quality product C" },
+    { "name": "Product D", "description": "High-quality product D" },
+    { "name": "Product E", "description": "High-quality product E" }
+  ],
+  "materials": [
+    { "name": "Material X", "description": "Raw material X", "quantity": 100 },
+    { "name": "Material Y", "description": "Raw material Y", "quantity": 200 },
+    { "name": "Material Z", "description": "Raw material Z", "quantity": 150 },
+    { "name": "Material W", "description": "Raw material W", "quantity": 300 },
+    { "name": "Material V", "description": "Raw material V", "quantity": 250 }
+  ],
+  "productionOrders": [
+    { "product_id": 1, "quantity": 50, "status": "planned" },
+    { "product_id": 2, "quantity": 100, "status": "in_progress" },
+    { "product_id": 3, "quantity": 75, "status": "completed" },
+    { "product_id": 4, "quantity": 200, "status": "planned" },
+    { "product_id": 5, "quantity": 150, "status": "in_progress" }
+  ],
+  "productionTracking": [
+    { "order_id": 1, "machine_id": 1, "operator_id": 1, "status": "raw_material_loaded" },
+    { "order_id": 2, "machine_id": 2, "operator_id": 2, "status": "in_progress" },
+    { "order_id": 3, "machine_id": 3, "operator_id": 3, "status": "completed" },
+    { "order_id": 4, "machine_id": 4, "operator_id": 4, "status": "raw_material_loaded" },
+    { "order_id": 5, "machine_id": 5, "operator_id": 5, "status": "in_progress" }
+  ],
+  "qualityChecks": [
+    { "order_id": 1, "check_type": "visual", "result": "pass", "inspector_id": 1 },
+    { "order_id": 2, "check_type": "measurement", "result": "fail", "inspector_id": 2 },
+    { "order_id": 3, "check_type": "visual", "result": "pass", "inspector_id": 3 },
+    { "order_id": 4, "check_type": "measurement", "result": "pass", "inspector_id": 4 },
+    { "order_id": 5, "check_type": "visual", "result": "fail", "inspector_id": 5 }
+  ]
+}

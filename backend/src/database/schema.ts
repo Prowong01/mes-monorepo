@@ -19,7 +19,7 @@ export const checkResultEnum = pgEnum("check_result", [
 ]);
 
 // 产品表
-export const products = pgTable("products", {
+export const productsTable = pgTable("products", {
     id: serial("id").primaryKey(),
     name: varchar("name", { length: 255 }).notNull(),
     description: text("description"),
@@ -27,7 +27,7 @@ export const products = pgTable("products", {
 });
 
 // 原材料表
-export const materials = pgTable("materials", {
+export const materialsTable = pgTable("materials", {
     id: serial("id").primaryKey(),
     name: varchar("name", { length: 255 }).notNull(),
     description: text("description"),
@@ -36,9 +36,9 @@ export const materials = pgTable("materials", {
 });
 
 // 生产订单表
-export const productionOrders = pgTable("production_orders", {
+export const productionOrdersTable = pgTable("production_orders", {
     id: serial("id").primaryKey(),
-    product_id: integer("product_id").references(() => products.id),
+    product_id: integer("product_id").references(() => productsTable.id),
     quantity: integer("quantity").notNull(),
     status: orderStatusEnum("status").notNull(),
     start_date: timestamp("start_date"),
@@ -47,9 +47,9 @@ export const productionOrders = pgTable("production_orders", {
 });
 
 // 生产跟踪表
-export const productionTracking = pgTable("production_tracking", {
+export const productionTrackingTable = pgTable("production_tracking", {
     id: serial("id").primaryKey(),
-    order_id: integer("order_id").references(() => productionOrders.id),
+    order_id: integer("order_id").references(() => productionOrdersTable.id),
     machine_id: integer("machine_id"),
     operator_id: integer("operator_id"),
     status: trackingStatusEnum("status").notNull(),
@@ -58,9 +58,9 @@ export const productionTracking = pgTable("production_tracking", {
 });
 
 // 质量控制表
-export const qualityChecks = pgTable("quality_checks", {
+export const qualityChecksTable = pgTable("quality_checks", {
     id: serial("id").primaryKey(),
-    order_id: integer("order_id").references(() => productionOrders.id),
+    order_id: integer("order_id").references(() => productionOrdersTable.id),
     check_type: varchar("check_type", { length: 255 }).notNull(),
     result: checkResultEnum("result").notNull(),
     notes: text("notes"),
