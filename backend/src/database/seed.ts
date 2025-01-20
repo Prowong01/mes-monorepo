@@ -3,6 +3,27 @@ import { productsTable, materialsTable, productionOrdersTable, productionTrackin
 // @ts-ignore
 import dummyData from "../data.json";
 
+type DataWithDates = Record<string, any>;
+
+function convertDates<T extends DataWithDates>(
+    data: T[],
+    dateFields: (keyof T)[]
+): T[] {
+    return data.map((item) => {
+        dateFields.forEach((field) => {
+            if (item[field] && typeof item[field] === "string") {
+                // @ts-ignore
+                item[field] = new Date(item[field]);
+            }
+        });
+        return item;
+    });
+}
+
+const productionOrdersWithDates = convertDates(dummyData.productionOrders, ['start_date', 'end_date']);
+const productionTrackingWithDates = convertDates(dummyData.productionTracking, ['start_time', 'end_time']);
+const qualityChecksWithDates = convertDates(dummyData.qualityChecks, ['check_date']);
+
 async function seedDatabase() {
     try {
         console.log("Seeding products...");

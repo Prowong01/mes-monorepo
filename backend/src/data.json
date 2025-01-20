@@ -1,37 +1,207 @@
 {
   "products": [
-    { "name": "Product A", "description": "High-quality product A" },
-    { "name": "Product B", "description": "High-quality product B" },
-    { "name": "Product C", "description": "High-quality product C" },
-    { "name": "Product D", "description": "High-quality product D" },
-    { "name": "Product E", "description": "High-quality product E" }
+    {
+      "name": "Product A",
+      "description": "High-quality product A",
+      "unit_cost": 10,
+      "production_time": 2,
+      "required_materials": [{"material_id": 1, "quantity": 2}, {"material_id": 2, "quantity": 1}]
+    },
+    {
+      "name": "Product B",
+      "description": "High-quality product B",
+      "unit_cost": 15,
+      "production_time": 3,
+      "required_materials": [{"material_id": 3, "quantity": 1}, {"material_id": 4, "quantity": 2}]
+    },
+    {
+      "name": "Product C",
+      "description": "High-quality product C",
+      "unit_cost": 20,
+      "production_time": 4,
+      "required_materials": [{"material_id": 2, "quantity": 3}, {"material_id": 5, "quantity": 1}]
+    },
+    {
+      "name": "Product D",
+      "description": "High-quality product D",
+      "unit_cost": 25,
+      "production_time": 5,
+      "required_materials": [{"material_id": 4, "quantity": 2}, {"material_id": 5, "quantity": 2}]
+    },
+    {
+      "name": "Product E",
+      "description": "High-quality product E",
+      "unit_cost": 30,
+      "production_time": 6,
+      "required_materials": [{"material_id": 1, "quantity": 1}, {"material_id": 3, "quantity": 2}]
+    }
   ],
   "materials": [
-    { "name": "Material X", "description": "Raw material X", "quantity": 100 },
-    { "name": "Material Y", "description": "Raw material Y", "quantity": 200 },
-    { "name": "Material Z", "description": "Raw material Z", "quantity": 150 },
-    { "name": "Material W", "description": "Raw material W", "quantity": 300 },
-    { "name": "Material V", "description": "Raw material V", "quantity": 250 }
+    {
+      "name": "Material X",
+      "description": "Raw material X",
+      "quantity": 100,
+      "unit_cost": 5,
+      "reorder_level": 50
+    },
+    {
+      "name": "Material Y",
+      "description": "Raw material Y",
+      "quantity": 200,
+      "unit_cost": 4,
+      "reorder_level": 100
+    },
+    {
+      "name": "Material Z",
+      "description": "Raw material Z",
+      "quantity": 150,
+      "unit_cost": 6,
+      "reorder_level": 75
+    },
+    {
+      "name": "Material W",
+      "description": "Raw material W",
+      "quantity": 300,
+      "unit_cost": 3,
+      "reorder_level": 150
+    },
+    {
+      "name": "Material V",
+      "description": "Raw material V",
+      "quantity": 250,
+      "unit_cost": 7,
+      "reorder_level": 125
+    }
   ],
   "productionOrders": [
-    { "product_id": 1, "quantity": 50, "status": "planned" },
-    { "product_id": 2, "quantity": 100, "status": "in_progress" },
-    { "product_id": 3, "quantity": 75, "status": "completed" },
-    { "product_id": 4, "quantity": 200, "status": "planned" },
-    { "product_id": 5, "quantity": 150, "status": "in_progress" }
+    {
+      "product_id": 1,
+      "quantity": 50,
+      "status": "planned",
+      "start_date": "2023-10-01T08:00:00Z",
+      "end_date": "2023-10-05T17:00:00Z",
+      "priority": "high"
+    },
+    {
+      "product_id": 2,
+      "quantity": 100,
+      "status": "in_progress",
+      "start_date": "2023-10-02T09:00:00Z",
+      "end_date": "2023-10-07T16:00:00Z",
+      "priority": "medium"
+    },
+    {
+      "product_id": 3,
+      "quantity": 75,
+      "status": "completed",
+      "start_date": "2023-09-25T10:00:00Z",
+      "end_date": "2023-09-30T15:00:00Z",
+      "priority": "low"
+    },
+    {
+      "product_id": 4,
+      "quantity": 200,
+      "status": "planned",
+      "start_date": "2023-10-08T08:00:00Z",
+      "end_date": "2023-10-12T17:00:00Z",
+      "priority": "high"
+    },
+    {
+      "product_id": 5,
+      "quantity": 150,
+      "status": "in_progress",
+      "start_date": "2023-10-03T11:00:00Z",
+      "end_date": "2023-10-09T14:00:00Z",
+      "priority": "medium"
+    }
   ],
   "productionTracking": [
-    { "order_id": 1, "machine_id": 1, "operator_id": 1, "status": "raw_material_loaded" },
-    { "order_id": 2, "machine_id": 2, "operator_id": 2, "status": "in_progress" },
-    { "order_id": 3, "machine_id": 3, "operator_id": 3, "status": "completed" },
-    { "order_id": 4, "machine_id": 4, "operator_id": 4, "status": "raw_material_loaded" },
-    { "order_id": 5, "machine_id": 5, "operator_id": 5, "status": "in_progress" }
+    {
+      "order_id": 1,
+      "machine_id": 1,
+      "operator_id": 1,
+      "status": "raw_material_loaded",
+      "start_time": "2023-10-01T08:00:00Z",
+      "end_time": "2023-10-01T12:00:00Z",
+      "material_usage": [{"material_id": 1, "quantity_used": 2}, {"material_id": 2, "quantity_used": 1}]
+    },
+    {
+      "order_id": 2,
+      "machine_id": 2,
+      "operator_id": 2,
+      "status": "in_progress",
+      "start_time": "2023-10-02T09:00:00Z",
+      "end_time": "2023-10-02T13:00:00Z",
+      "material_usage": [{"material_id": 3, "quantity_used": 1}, {"material_id": 4, "quantity_used": 2}]
+    },
+    {
+      "order_id": 3,
+      "machine_id": 3,
+      "operator_id": 3,
+      "status": "completed",
+      "start_time": "2023-09-25T10:00:00Z",
+      "end_time": "2023-09-25T14:00:00Z",
+      "material_usage": [{"material_id": 2, "quantity_used": 3}, {"material_id": 5, "quantity_used": 1}]
+    },
+    {
+      "order_id": 4,
+      "machine_id": 4,
+      "operator_id": 4,
+      "status": "raw_material_loaded",
+      "start_time": "2023-10-08T08:00:00Z",
+      "end_time": "2023-10-08T12:00:00Z",
+      "material_usage": [{"material_id": 4, "quantity_used": 2}, {"material_id": 5, "quantity_used": 2}]
+    },
+    {
+      "order_id": 5,
+      "machine_id": 5,
+      "operator_id": 5,
+      "status": "in_progress",
+      "start_time": "2023-10-03T11:00:00Z",
+      "end_time": "2023-10-03T15:00:00Z",
+      "material_usage": [{"material_id": 1, "quantity_used": 1}, {"material_id": 3, "quantity_used": 2}]
+    }
   ],
   "qualityChecks": [
-    { "order_id": 1, "check_type": "visual", "result": "pass", "inspector_id": 1 },
-    { "order_id": 2, "check_type": "measurement", "result": "fail", "inspector_id": 2 },
-    { "order_id": 3, "check_type": "visual", "result": "pass", "inspector_id": 3 },
-    { "order_id": 4, "check_type": "measurement", "result": "pass", "inspector_id": 4 },
-    { "order_id": 5, "check_type": "visual", "result": "fail", "inspector_id": 5 }
+    {
+      "order_id": 1,
+      "check_type": "visual",
+      "result": "pass",
+      "check_date": "2023-10-01T14:00:00Z",
+      "defect_details": null,
+      "inspector_id": 1
+    },
+    {
+      "order_id": 2,
+      "check_type": "measurement",
+      "result": "fail",
+      "check_date": "2023-10-02T15:00:00Z",
+      "defect_details": "Defect in measurement",
+      "inspector_id": 2
+    },
+    {
+      "order_id": 3,
+      "check_type": "visual",
+      "result": "pass",
+      "check_date": "2023-09-30T16:00:00Z",
+      "defect_details": null,
+      "inspector_id": 3
+    },
+    {
+      "order_id": 4,
+      "check_type": "measurement",
+      "result": "pass",
+      "check_date": "2023-10-12T10:00:00Z",
+      "defect_details": null,
+      "inspector_id": 4
+    },
+    {
+      "order_id": 5,
+      "check_type": "visual",
+      "result": "fail",
+      "check_date": "2023-10-09T12:00:00Z",
+      "defect_details": "Visual defect found",
+      "inspector_id": 5
+    }
   ]
 }
