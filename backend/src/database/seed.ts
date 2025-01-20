@@ -1,7 +1,7 @@
 import { db } from "./drizzle";
 import { productsTable, materialsTable, productionOrdersTable, productionTrackingTable, qualityChecksTable } from "./schema";
 // @ts-ignore
-import dummyData from "../data.json"; // 导入假数据
+import dummyData from "../data.json";
 
 async function seedDatabase() {
     try {

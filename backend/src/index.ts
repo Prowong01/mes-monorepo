@@ -11,7 +11,6 @@ app.use(bodyParser.json());
 
 app.use("/api", apiRoutes);
 
-// 启动服务器
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

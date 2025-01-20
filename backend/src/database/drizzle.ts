@@ -1,7 +1,7 @@
 import { config } from "dotenv";
 import { drizzle } from "drizzle-orm/neon-http";
 import { neon } from "@neondatabase/serverless";
-import * as schema from "./schema"; // 导入所有表结构
+import * as schema from "./schema";
 
 config({ path: ".env.local" });
 
@@ -13,8 +13,7 @@ if (!databaseUrl) {
 
 const sql = neon(databaseUrl);
 
-// 初始化 Drizzle ORM
 export const db = drizzle(sql, {
     schema, // 将所有表结构传递给 drizzle
-    casing: "snake_case", // 将字段名转换为 snake_case（可选）
+    casing: "snake_case",
 });

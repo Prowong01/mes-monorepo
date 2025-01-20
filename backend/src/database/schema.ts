@@ -1,6 +1,5 @@
 import { pgTable, serial, text, varchar, integer, timestamp, pgEnum } from "drizzle-orm/pg-core";
 
-// 枚举类型
 export const orderStatusEnum = pgEnum("order_status", [
     "planned",
     "in_progress",
@@ -18,7 +17,6 @@ export const checkResultEnum = pgEnum("check_result", [
     "fail",
 ]);
 
-// 产品表
 export const productsTable = pgTable("products", {
     id: serial("id").primaryKey(),
     name: varchar("name", { length: 255 }).notNull(),
@@ -26,7 +24,6 @@ export const productsTable = pgTable("products", {
     created_at: timestamp("created_at").defaultNow(),
 });
 
-// 原材料表
 export const materialsTable = pgTable("materials", {
     id: serial("id").primaryKey(),
     name: varchar("name", { length: 255 }).notNull(),
@@ -35,7 +32,6 @@ export const materialsTable = pgTable("materials", {
     created_at: timestamp("created_at").defaultNow(),
 });
 
-// 生产订单表
 export const productionOrdersTable = pgTable("production_orders", {
     id: serial("id").primaryKey(),
     product_id: integer("product_id").references(() => productsTable.id),
@@ -46,7 +42,6 @@ export const productionOrdersTable = pgTable("production_orders", {
     created_at: timestamp("created_at").defaultNow(),
 });
 
-// 生产跟踪表
 export const productionTrackingTable = pgTable("production_tracking", {
     id: serial("id").primaryKey(),
     order_id: integer("order_id").references(() => productionOrdersTable.id),
@@ -57,7 +52,6 @@ export const productionTrackingTable = pgTable("production_tracking", {
     created_at: timestamp("created_at").defaultNow(),
 });
 
-// 质量控制表
 export const qualityChecksTable = pgTable("quality_checks", {
     id: serial("id").primaryKey(),
     order_id: integer("order_id").references(() => productionOrdersTable.id),
