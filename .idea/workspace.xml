@@ -5,36 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2795f93-4dfb-4a23-b6e6-d751c64205f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/database/seed.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/api/product/controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/api/product/routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/api/product/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/Product.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.env.local" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env.local" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/api/dashboard/controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/dashboard/controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/api/dashboard/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/dashboard/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/api/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/api/production/controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/production/controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/api/production/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/production/routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/api/production/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/production/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/database/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/database/schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/api/quality/controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/quality/controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/api/quality/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/quality/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/migrations/0000_smart_sprite.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/migrations/0001_jazzy_firebird.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/migrations/meta/0000_snapshot.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/migrations/meta/0001_snapshot.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/migrations/meta/_journal.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/layout/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/layout/Sidebar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Composition API Component" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Prowong01"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Prowong01&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Prowong01/mes-monorepo.git",
-    "accountId": "a4aaaa65-b20a-4748-b114-a2745ce10ec0"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Prowong01/mes-monorepo.git&quot;,
+    &quot;accountId&quot;: &quot;a4aaaa65-b20a-4748-b114-a2745ce10ec0&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -66,6 +86,11 @@
     "settings.editor.selected.configurable": "settings.nodejs",
     "ts.external.directory.path": "C:\\Users\\new\\OneDrive\\Desktop\\Code\\mes-monorepo\\frontend\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "vue.recent.templates": [
+      "Vue Composition API Component"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -95,7 +120,8 @@
       <option name="presentableId" value="Default" />
       <updated>1737124237738</updated>
       <workItem from="1737124239977" duration="9565000" />
-      <workItem from="1737292140237" duration="3110000" />
+      <workItem from="1737292140237" duration="3718000" />
+      <workItem from="1737380216526" duration="4094000" />
     </task>
     <servers />
   </component>

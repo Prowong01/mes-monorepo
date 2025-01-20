@@ -7,6 +7,7 @@ import {
     fetchProductionTracking,
     createProductionTracking,
 } from "./service";
+import { ProductionOrder, ProductionTracking } from "../../types";
 
 export const getProductionOrders = async (req: Request, res: Response) => {
     try {
@@ -20,8 +21,9 @@ export const getProductionOrders = async (req: Request, res: Response) => {
 
 export const createOrder = async (req: Request, res: Response) => {
     try {
-        const newOrder = await createProductionOrder(req.body);
-        res.json(newOrder);
+        const orderData: Omit<ProductionOrder, "id" | "created_at"> = req.body;
+        const newOrder = await createProductionOrder(orderData);
+        res.status(201).json(newOrder); // 201 Created
     } catch (err) {
         console.error("Failed to create production order:", err);
         res.status(500).json({ error: "Internal server error" });
@@ -31,7 +33,8 @@ export const createOrder = async (req: Request, res: Response) => {
 export const updateOrder = async (req: Request, res: Response) => {
     try {
         const orderId = parseInt(req.params.id);
-        const updatedOrder = await updateProductionOrder(orderId, req.body);
+        const orderData: Partial<ProductionOrder> = req.body;
+        const updatedOrder = await updateProductionOrder(orderId, orderData);
         res.json(updatedOrder);
     } catch (err) {
         console.error("Failed to update production order:", err);
@@ -39,12 +42,11 @@ export const updateOrder = async (req: Request, res: Response) => {
     }
 };
 
-
 export const deleteOrder = async (req: Request, res: Response) => {
     try {
         const orderId = parseInt(req.params.id);
         await deleteProductionOrder(orderId);
-        res.json({ message: "Production order deleted successfully" });
+        res.status(204).json({ message: "Production order deleted successfully" }); // 204 No Content
     } catch (err) {
         console.error("Failed to delete production order:", err);
         res.status(500).json({ error: "Internal server error" });
@@ -63,8 +65,9 @@ export const getProductionTracking = async (req: Request, res: Response) => {
 
 export const createTracking = async (req: Request, res: Response) => {
     try {
-        const newTracking = await createProductionTracking(req.body);
-        res.json(newTracking);
+        const trackingData: Omit<ProductionTracking, "id" | "created_at"> = req.body;
+        const newTracking = await createProductionTracking(trackingData);
+        res.status(201).json(newTracking); // 201 Created
     } catch (err) {
         console.error("Failed to create production tracking:", err);
         res.status(500).json({ error: "Internal server error" });

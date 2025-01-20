@@ -9,9 +9,13 @@
         <dashboard-outlined />
         <span>Dashboard</span>
       </a-menu-item>
+      <a-menu-item key="/product">
+        <monitor-outlined />
+        <span>Product</span>
+      </a-menu-item>
       <a-menu-item key="/production">
         <monitor-outlined />
-        <span>Production</span>
+        <span>Order List</span>
       </a-menu-item>
     </a-menu>
   </a-layout-sider>

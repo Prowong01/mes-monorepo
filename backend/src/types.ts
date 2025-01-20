@@ -33,21 +33,41 @@ export interface DashboardData {
 }
 
 export interface ProductionOrder {
-    id?: number;
+    readonly id?: number;
     product_id: number | null;
     quantity: number;
     status: OrderStatus;
     start_date?: Date;
     end_date?: Date;
-    created_at?: Date;
+    readonly created_at?: Date;
 }
 
 export interface ProductionTracking {
-    id?: number;
+    readonly id?: number;
     order_id: number | null;
-    machine_id: number | null;
+    machine_id: number | null
     operator_id: number | null;
     status: TrackingStatus;
     notes?: string;
+    readonly created_at?: Date;
+}
+
+export interface QualityCheck {
+    id?: number;
+    order_id: number;
+    check_type: string;
+    result: "pass" | "fail";
+    notes?: string;
+    inspector_id?: number;
+    created_at?: Date;
+}
+
+export interface Product {
+    id?: number;
+    name: string;
+    description: string;
+    unit_cost: number;
+    production_time: number;
+    required_materials: Array<{ material_id: number; quantity: number }>;
     created_at?: Date;
 }

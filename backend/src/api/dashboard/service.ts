@@ -1,6 +1,6 @@
-import {db} from "../../database/drizzle";
-import {productionOrdersTable, productionTrackingTable, qualityChecksTable,} from "../../database/schema";
-import {count, eq} from "drizzle-orm";
+import { db } from "../../database/drizzle";
+import { productionOrdersTable, productionTrackingTable, qualityChecksTable } from "../../database/schema";
+import { count, eq } from "drizzle-orm";
 import {
     ProductionStatus,
     MachineUtilization,
@@ -17,7 +17,10 @@ export const fetchProductionStatus = async (): Promise<ProductionStatus[]> => {
         .from(productionOrdersTable)
         .groupBy(productionOrdersTable.status);
 
-    return result as ProductionStatus[];
+    return result.map(row => ({
+        status: row.status,
+        count: row.count,
+    })) as ProductionStatus[];
 };
 
 export const fetchMachineUtilization = async (): Promise<MachineUtilization[]> => {
@@ -65,10 +68,9 @@ export const fetchDefectRate = async (): Promise<DefectRate> => {
     return {
         total,
         fail,
-        defectRate: (fail / total) * 100,
+        defectRate: total > 0 ? (fail / total) * 100 : 0,
     };
 };
-
 
 export const fetchDashboardData = async (): Promise<DashboardData> => {
     const [productionStatus, machineUtilization, defectRate] = await Promise.all([

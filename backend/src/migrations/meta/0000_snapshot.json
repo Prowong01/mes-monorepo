@@ -1,9 +1,55 @@
 {
-  "id": "92d33ab2-5a60-4f46-9b5f-0ce2186339e4",
+  "id": "44e049f0-7550-495c-bcaa-fa78a21a3034",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
+    "public.machines": {
+      "name": "machines",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "name": "status",
+          "type": "machine_status",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "'idle'"
+        },
+        "last_maintenance_date": {
+          "name": "last_maintenance_date",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
     "public.materials": {
       "name": "materials",
       "schema": "",
@@ -31,6 +77,56 @@
           "type": "integer",
           "primaryKey": false,
           "notNull": true
+        },
+        "unit_cost": {
+          "name": "unit_cost",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "reorder_level": {
+          "name": "reorder_level",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.operators": {
+      "name": "operators",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "skill_level": {
+          "name": "skill_level",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
         },
         "created_at": {
           "name": "created_at",
@@ -86,6 +182,12 @@
         "end_date": {
           "name": "end_date",
           "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "priority": {
+          "name": "priority",
+          "type": "varchar(50)",
           "primaryKey": false,
           "notNull": false
         },
@@ -154,6 +256,24 @@
           "primaryKey": false,
           "notNull": true
         },
+        "start_time": {
+          "name": "start_time",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "end_time": {
+          "name": "end_time",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "material_usage": {
+          "name": "material_usage",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": false
+        },
         "notes": {
           "name": "notes",
           "type": "text",
@@ -212,6 +332,24 @@
           "primaryKey": false,
           "notNull": false
         },
+        "unit_cost": {
+          "name": "unit_cost",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "production_time": {
+          "name": "production_time",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "required_materials": {
+          "name": "required_materials",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": false
+        },
         "created_at": {
           "name": "created_at",
           "type": "timestamp",
@@ -257,8 +395,14 @@
           "primaryKey": false,
           "notNull": true
         },
-        "notes": {
-          "name": "notes",
+        "check_date": {
+          "name": "check_date",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "defect_details": {
+          "name": "defect_details",
           "type": "text",
           "primaryKey": false,
           "notNull": false
@@ -266,6 +410,12 @@
         "inspector_id": {
           "name": "inspector_id",
           "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "notes": {
+          "name": "notes",
+          "type": "text",
           "primaryKey": false,
           "notNull": false
         },
@@ -307,6 +457,16 @@
       "values": [
         "pass",
         "fail"
+      ]
+    },
+    "public.machine_status": {
+      "name": "machine_status",
+      "schema": "public",
+      "values": [
+        "idle",
+        "in_use",
+        "down",
+        "maintenance"
       ]
     },
     "public.order_status": {
