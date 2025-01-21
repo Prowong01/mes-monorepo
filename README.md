@@ -26,6 +26,12 @@ npm install
 npm run dev
 ```
 
+### 4. View Database (Optional)
+```bash
+cd backend
+npm run db:studio
+```
+
 ## 🛠️ Tech Stack
 
 ### Frontend
