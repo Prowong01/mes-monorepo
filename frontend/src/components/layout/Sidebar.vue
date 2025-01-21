@@ -9,27 +9,46 @@
         <dashboard-outlined />
         <span>Dashboard</span>
       </a-menu-item>
+      <a-menu-item key="/material">
+        <tool-outlined />
+        <span>Material</span>
+      </a-menu-item>
       <a-menu-item key="/product">
-        <monitor-outlined />
+        <gold-outlined />
         <span>Product</span>
       </a-menu-item>
-      <a-menu-item key="/production">
-        <monitor-outlined />
+      <a-menu-item key="/order">
+        <profile-outlined />
         <span>Order List</span>
+      </a-menu-item>
+      <a-menu-item key="/tracking">
+        <aim-outlined />
+        <span>Tracking</span>
+      </a-menu-item>
+      <a-menu-item key="/quality">
+        <search-outlined />
+        <span>Quality Control</span>
       </a-menu-item>
     </a-menu>
   </a-layout-sider>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
-import { DashboardOutlined, MonitorOutlined, BarChartOutlined } from '@ant-design/icons-vue'
+import { ref, watch } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+import { DashboardOutlined, GoldOutlined, ProfileOutlined, AimOutlined, ToolOutlined, SearchOutlined } from '@ant-design/icons-vue'
 import logo from '../../assets/logo.png'
 
 const router = useRouter()
+const route = useRoute();
 const collapsed = ref(false)
-const selectedKeys = ref(['/']) // default route
+const selectedKeys = ref([route.path]);
+
+watch(() => route.path,
+    (newPath) => {
+      selectedKeys.value = [newPath];
+    }
+);
 
 const handleMenuClick = ({ key }) => {
   router.push(key)

@@ -8,9 +8,9 @@ import {
 
 const router = express.Router();
 
-router.get("/quality-checks", getQualityChecks);
-router.post("/quality-checks", createCheck);
-router.put("/quality-checks/:id", updateCheck);
-router.delete("/quality-checks/:id", deleteCheck);
+router.get("/", getQualityChecks);
+router.post("/", createCheck);
+router.put("/:id", updateCheck);
+router.delete("/:id", deleteCheck);
 
 export default router;

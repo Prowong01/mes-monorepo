@@ -39,6 +39,5 @@ export const updateProduct = async (
 };
 
 export const deleteProduct = async (productId: number): Promise<void> => {
-    console.log("Executing delete query for product ID:", productId);
     await db.delete(productsTable).where(eq(productsTable.id, productId));
 };

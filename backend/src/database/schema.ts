@@ -49,8 +49,8 @@ export const productionOrdersTable = pgTable("production_orders", {
     product_id: integer("product_id").references(() => productsTable.id),
     quantity: integer("quantity").notNull(),
     status: orderStatusEnum("status").notNull(),
-    start_date: timestamp("start_date"),
-    end_date: timestamp("end_date"),
+    start_date: varchar("start_date", { length: 255 }),
+    end_date: varchar("end_date", { length: 255 }),
     priority: varchar("priority", { length: 50 }),
     created_at: timestamp("created_at").defaultNow(),
 });
@@ -74,7 +74,7 @@ export const qualityChecksTable = pgTable("quality_checks", {
     check_type: varchar("check_type", { length: 255 }).notNull(),
     result: checkResultEnum("result").notNull(),
     check_date: timestamp("check_date"),
-    defect_details: text("defect_details"), // 如果检查结果为fail，记录缺陷的详细信息
+    defect_details: text("defect_details"),
     inspector_id: integer("inspector_id"),
     notes: text("notes"),
     created_at: timestamp("created_at").defaultNow(),

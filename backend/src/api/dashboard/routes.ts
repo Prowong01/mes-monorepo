@@ -3,6 +3,6 @@ import { getDashboardData } from "./controller";
 
 const router = express.Router();
 
-router.get("/data", getDashboardData);
+router.get("/", getDashboardData);
 
 export default router;
