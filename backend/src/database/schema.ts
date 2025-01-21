@@ -73,7 +73,7 @@ export const qualityChecksTable = pgTable("quality_checks", {
     order_id: integer("order_id").references(() => productionOrdersTable.id),
     check_type: varchar("check_type", { length: 255 }).notNull(),
     result: checkResultEnum("result").notNull(),
-    check_date: timestamp("check_date"),
+    check_date: varchar("check_date", { length: 255 }),
     defect_details: text("defect_details"),
     inspector_id: integer("inspector_id"),
     notes: text("notes"),

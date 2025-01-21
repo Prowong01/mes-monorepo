@@ -32,8 +32,8 @@ CREATE TABLE "production_orders" (
 	"product_id" integer,
 	"quantity" integer NOT NULL,
 	"status" "order_status" NOT NULL,
-	"start_date" timestamp,
-	"end_date" timestamp,
+	"start_date" varchar(255),
+	"end_date" varchar(255),
 	"priority" varchar(50),
 	"created_at" timestamp DEFAULT now()
 );
